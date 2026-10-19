@@ -7,7 +7,7 @@ Design of a shell-and-tube cooler for 12 kg/s of hydrocarbon (150 to 90 °C) usi
 EDR's own Design (Sizing) result is the selected exchanger: 116 tubes of 0.75 in OD, 4.88 m long, one pass in a 13.27 in AES shell, giving about 13% excess area with 0.12 bar shell-side and 0.11 bar tube-side pressure drop, at $24,346 in EDR.
 
 - It cools 12 kg/s of hydrocarbon from 150 to 90 °C against cooling water entering at 30 °C (water flow 28.7 kg/s).
-- The hand-built designs also pass every limit but cost more: Design B (317 tubes, 2.44 m, 14.8% excess) is $28,174 and Design A (168 tubes, 3.66 m, 13.8%) is $27,865. B has the lowest pressure drops (0.093 and 0.149 bar).
+- The hand-built designs also pass every limit but cost more: Design B (317 tubes, 2.44 m, 14.8% excess) is $28,174 and Design A (168 tubes, 3.66 m, 12.6%) is $28,144. B has the lowest pressure drops (0.093 and 0.149 bar).
 - Design B still passes with a five-alkane hydrocarbon mixture (12.85% excess). The selected EDR design has not yet been run with that mixture.
 
 ## Design basis and deviations from the brief
@@ -58,10 +58,10 @@ Setup lessons: leftover baffle inlet and end-space inputs inflated B's excess ar
 | | Design A | Design B |
 | --- | --- | --- |
 | Tubes and length | 168 × 3.66 m | 317 × 2.44 m |
-| Excess area | 13.8% | 14.8% |
+| Excess area | 12.6% | 14.8% |
 | Shell-side ΔP (limit 0.40 bar) | 0.146 bar | 0.093 bar |
-| Tube-side ΔP (limit 0.70 bar) | 0.218 bar | 0.149 bar |
-| EDR total cost | $27,865 | $28,174 |
+| Tube-side ΔP (limit 0.70 bar) | 0.285 bar | 0.149 bar |
+| EDR total cost | $28,144 | $28,174 |
 
 EDR's cost depends on the mechanical design pressures entered; with 100 psi (shell) and 75 psi (tubes) B costs $28,460.
 
@@ -77,10 +77,10 @@ The run used EDR's Design (Sizing) mode with AES, hot fluid on the shell side, 0
 | Tubes × length | 116 × 4.88 m | 317 × 2.44 m | 168 × 3.66 m |
 | Tube passes | 1 | 2 | 2 |
 | Baffle cut | 37.7% | 25% | 25% |
-| Excess area | about 13% | 14.8% | 13.8% |
+| Excess area | about 13% | 14.8% | 12.6% |
 | Shell ΔP (limit 0.40 bar) | 0.12 bar | 0.093 bar | 0.146 bar |
-| Tube ΔP (limit 0.70 bar) | 0.11 bar | 0.149 bar | 0.218 bar |
-| Total cost | $24,346 | $28,174 | $27,865 |
+| Tube ΔP (limit 0.70 bar) | 0.11 bar | 0.149 bar | 0.285 bar |
+| Total cost | $24,346 | $28,174 | $28,144 |
 
 EDR's design has a smaller shell and one pass, so it uses 32.4 m² of surface against B's 35.1 m², and the water velocity is 1.47 m/s with no vibration or RhoV2 problem.
 
@@ -98,7 +98,7 @@ EDR's design has a smaller shell and one pass, so it uses 32.4 m² of surface ag
 | Tube passes | 1 | 4.8% | tube 0.038 bar |
 | | 2 | 12.3% | tube 0.154 bar |
 | | 4 | 17.5% | tube 1.007 bar, fails 0.70 bar limit |
-| Tube OD | 0.75 in (A, 168 tubes) | 13.8% | shell 0.146, tube 0.218 bar |
+| Tube OD | 0.75 in (A, 168 tubes) | 12.6% | shell 0.146, tube 0.285 bar |
 | | 0.625 in (B, 317 tubes) | 14.8% | shell 0.093, tube 0.149 bar |
 
 The cut, spacing and pass sweeps were run on B with 310 tubes and an inlet space left over from an earlier file, so read them as trends. After clearing the end spaces, 6.5 in spacing is best for the final geometry.
