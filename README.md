@@ -51,6 +51,8 @@ HeatX block, Rigorous Shell & Tube (EDR), Rating/Checking mode, geometry typed i
 - EDR process inputs: fouling 0.0002 (hot) and 0.00018 (cold) m²K/W; allowable pressure drop 0.40 bar (shell) and 0.70 bar (tubes).
 - Final design B: AES, hot fluid shell side, 18 in shell, 317 tubes, 0.625 in OD, 0.065 in wall, 0.8125 in triangular pitch, 96 in long, 2 passes, single segmental baffles, 25% cut, 6.5 in spacing (11 baffles), end spaces chosen by EDR.
 
+![Aspen Plus flowsheet with the HeatX block B1](images/00-flowsheet.png)
+
 Setup lessons: leftover baffle inlet and end-space inputs inflated B's excess area; a leftover 0.083 in wall raised the tube pressure drop; the inlet end space needs about 9.7 in for the 6.065 in nozzle.
 
 ## Tuned results: Design A versus Design B
@@ -64,6 +66,14 @@ Setup lessons: leftover baffle inlet and end-space inputs inflated B's excess ar
 | EDR total cost | $28,144 | $28,174 |
 
 EDR's cost depends on the mechanical design pressures entered; with 100 psi (shell) and 75 psi (tubes) B costs $28,460.
+
+Design A thermal results (168 tubes, 3.66 m, 12.6% excess):
+
+![Design A thermal results](images/04-design-a-overall-performance.png)
+
+Design B overall performance (317 tubes, 2.44 m):
+
+![Design B overall performance](images/03-design-b-overall-performance.png)
 
 ## EDR Design (Sizing) result
 
@@ -83,6 +93,14 @@ The run used EDR's Design (Sizing) mode with AES, hot fluid on the shell side, 0
 | Total cost | $24,346 | $28,174 | $28,144 |
 
 EDR's design has a smaller shell and one pass, so it uses 32.4 m² of surface against B's 35.1 m², and the water velocity is 1.47 m/s with no vibration or RhoV2 problem.
+
+Optimization options used for the run (minimum excess area 10%):
+
+![EDR optimization options](images/02-optimization-options.png)
+
+Overall performance of the selected design (116 tubes, 4.88 m, $24,346):
+
+![EDR final design overall performance](images/01-final-design-overall-performance.png)
 
 ## Sensitivity study
 
@@ -115,6 +133,8 @@ Mass fractions: N-decane 0.10, N-undecane 0.20, N-dodecane 0.30, N-tridecane 0.2
 | Shell ΔP | 0.093 bar | 0.098 bar |
 | Tube ΔP | 0.149 bar | 0.148 bar |
 
+![Alkane robustness test thermal results](images/05-alkane-robustness-thermal-results.png)
+
 ## Hand calculation versus Aspen EDR
 
 | | Hand | EDR | Difference |
@@ -128,6 +148,8 @@ Mass fractions: N-decane 0.10, N-undecane 0.20, N-dodecane 0.30, N-tridecane 0.2
 | Shell-side ΔP (bar) | about 0.5 | 0.093 | hand about 5× higher |
 
 Kern assumes all shell fluid crosses the bundle at the full shell diameter (0.92 m/s); EDR accounts for leakage and bypass streams (0.46 m/s). EDR is the number to trust for the final design.
+
+The hand calculation is a Python script: [hand_calc/hand_vs_edr.py](hand_calc/hand_vs_edr.py).
 
 ## Final selection, justification and risks
 
